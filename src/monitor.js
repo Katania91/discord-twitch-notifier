@@ -192,7 +192,7 @@ class StreamMonitor {
     const viewerDiff = Math.abs(newViewers - oldViewers);
     const viewerChanged = oldViewers === 0 ? true : (viewerDiff / oldViewers) >= viewerThreshold;
 
-    const shouldUpdate = titleChanged || gameChanged || viewerChanged || true;
+    const shouldUpdate = titleChanged || gameChanged || viewerChanged;
     
     if (shouldUpdate) {
       console.log(`🔄 Updating live data for ${streamer.username} (title: ${titleChanged}, game: ${gameChanged}, viewers: ${viewerChanged})`);
